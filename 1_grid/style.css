@@ -1,27 +1,26 @@
 /* Basic styling */
+
+html {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
-}
-
-html {
-	font-family: 'Open Sans', sans-serif;
+	box-sizing: inherit;
 }
 
 body {
-	width: 90vw;
+	width: 80%;
 	margin: auto;
-	background-color: #ECDFBD;
-	background-color: rgba(236, 223, 189, 0.1);
+	background-color: rgb(236, 223, 189); /*fallback*/
+	background-color: rgba(236, 223, 189, 0.05);
 	color: #3B3A35;
 	line-height: 1.6em;
 }
-article {
-	margin-bottom: 2em;
-}
 
 h1 {
+	margin: 2em 0 1em;
 	letter-spacing: -0.025em;
 }
 
@@ -39,24 +38,43 @@ em {
 	text-align: center;
 	font-weight: 300;
 	letter-spacing: 0.1em;
-	background-color: rgb(59, 58, 53);
-	background-color: rgba(59, 58, 53, 0.1);
-	padding: 0.6em 0;
+	background-color: rgb(59, 58, 53); /*fallback*/
+	background-color: rgba(59, 58, 53, 0.06);
+	padding: 0.8em 1em;
 }
 
 /* flex box grid */
 .grid {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .grid__cell {
 	flex: 1;
+	padding: 0 1em 0 0;
+}
+
+.grid__cell-last {
+	padding-right: 0;
 }
 
 .grid-gutters {
 	margin: 0 -1em 1em 0;
 }
 
-.grid-gutters > .grid__cell {
-	margin: 0 1em 0 0;
+/* flex box, custom col size */
+.grid__cell-full {
+	flex: 0 0 100%;
+}
+
+.grid__cell-1of2 {
+	flex: 0 0 50%;
+}
+
+.grid__cell-1of3 {
+	flex: 0 0 33.3%;
+}
+
+.grid__cell-1of4 {
+	flex: 0 0 25%;
 }
