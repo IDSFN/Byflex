@@ -4,6 +4,7 @@ html {
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 }
+
 *,
 *:before,
 *:after {
@@ -20,7 +21,6 @@ body {
 }
 
 h1 {
-	margin: 2em 0 1em;
 	letter-spacing: -0.025em;
 }
 
@@ -31,6 +31,13 @@ p {
 
 em {
 	font-weight: 600;
+	font-style: normal;
+	color: #20457C;
+}
+
+.note {
+	color: #FB6648;
+	font-size: 1em;
 }
 
 /* Box styling */
@@ -43,15 +50,22 @@ em {
 	padding: 0.8em 1em;
 }
 
+.blue {
+	background-color: blue;
+}
+
 /* flex box grid */
 .grid {
 	display: flex;
-	flex-wrap: wrap;
 }
 
 .grid__cell {
 	flex: 1;
-	padding: 0 1em 0 0;
+	padding-right: 1em;
+}
+
+.grid__cell-height {
+	align-self: stretch;
 }
 
 .grid__cell-last {
@@ -59,10 +73,14 @@ em {
 }
 
 .grid-gutters {
-	margin: 0 -1em 1em 0;
+	margin: 0 0 1em 0;
 }
 
 /* flex box, custom col size */
+.grid__cell-fit {
+	flex: 1;
+}
+
 .grid__cell-full {
 	flex: 0 0 100%;
 }
@@ -77,4 +95,19 @@ em {
 
 .grid__cell-1of4 {
 	flex: 0 0 25%;
+}
+
+/* Vertical and horizontal centering */
+.centerVH {
+	align-items: center;
+	justify-content: center;
+}
+
+/* UTILS */
+.space-top {
+	margin-top: 2em;
+}
+
+.space-bottom {
+	margin-bottom: 3em;
 }
