@@ -1,0 +1,62 @@
+/* Basic styling */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	width: 90vw;
+	margin: auto;
+	background-color: #ECDFBD;
+	background-color: rgba(236, 223, 189, 0.1);
+	color: #3B3A35;
+	line-height: 1.6em;
+}
+article {
+	margin-bottom: 2em;
+}
+
+h1 {
+	letter-spacing: -0.025em;
+}
+
+p {
+	font-size: 1.125em;
+	font-weight: 300;
+}
+
+em {
+	font-weight: 600;
+}
+
+/* Box styling */
+.box {
+	text-align: center;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	background-color: rgb(59, 58, 53);
+	background-color: rgba(59, 58, 53, 0.1);
+	padding: 0.6em 0;
+}
+
+/* flex box grid */
+.grid {
+	display: flex;
+}
+
+.grid__cell {
+	flex: 1;
+}
+
+.grid-gutters {
+	margin: 0 -1em 1em 0;
+}
+
+.grid-gutters > .grid__cell {
+	margin: 0 1em 0 0;
+}
