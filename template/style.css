@@ -1,0 +1,20 @@
+/* Basic styling */
+html {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	width: 90%;
+	margin: auto;
+	background-color: rgb(236, 223, 189); /*fallback*/
+	background-color: rgba(236, 223, 189, 0.05);
+	color: #3B3A35;
+	line-height: 1.6em;
+}
