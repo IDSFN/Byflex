@@ -1,0 +1,86 @@
+/* Basic styling */
+html {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	/*width: 98%;*/
+	margin: auto;
+	background-color: rgb(236, 223, 189); /*fallback*/
+	background-color: rgba(236, 223, 189, 0.05);
+	line-height: 1.6em;
+	color: #3B3A35;
+}
+
+/* UL */
+.ul {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ul__li {
+	flex: 1 1 100%;
+	padding: 1em 0;
+	background-color: rgba(236, 223, 189, 0.05);
+	transition: all 0.2s ease-in-out;
+	opacity: 0.8;
+}
+.ul__li:hover {
+	background-color: #3B3A35;
+	color: white;
+}
+
+.ul__li-social {
+	flex-basis: 25%;
+	opacity: 1;
+}
+
+/* UTILS */
+.centerVh {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 38em) {
+	.ul__li {
+		flex-basis: 50%;
+	}
+
+	.ul__li-social {
+		flex-basis: 25%;
+	}
+}
+
+@media only screen and (min-width: 50em) {
+	.ul {
+		height: 10vh;
+	}
+
+	.ul__li {
+		flex: 3;
+	}
+
+	.ul__li-social {
+		flex: 1;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	body {
+		width: 80%;
+	}
+}
