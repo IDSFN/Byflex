@@ -14,7 +14,54 @@ body {
 	width: 90%;
 	margin: auto;
 	background-color: rgb(236, 223, 189); /*fallback*/
-	background-color: rgba(236, 223, 189, 0.05);
+	background-color: rgba(236, 223, 189, 0.2);
 	color: #3B3A35;
 	line-height: 1.6em;
+}
+
+/* Basic UL li styling */
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+li {
+	padding-right: 0.4em;
+}
+
+li a {
+	width: 100%;
+	background-color: white;
+	color: #20457C;
+	text-decoration: none;
+	padding: 1em 0.4em;
+	transition: all 0.2s ease-in;
+}
+
+li a:hover {
+	background-color: #3B3A35;
+	color: white;
+}
+
+/* FlexBox layout */
+.f-container {
+	display: flex;
+}
+
+.f-container-VH {
+	justify-content: center;
+	align-items: center;
+}
+
+.f-item {
+	flex: 1;
+}
+
+.f-item-small {
+	flex-grow: 0.2;
+}
+
+.gutter {
+	padding-right: 1em;
 }
