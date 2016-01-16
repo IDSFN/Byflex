@@ -11,10 +11,151 @@ html {
 }
 
 body {
-	width: 90%;
+	width: 80%;
 	margin: auto;
-	background-color: rgb(236, 223, 189); /*fallback*/
-	background-color: rgba(236, 223, 189, 0.05);
-	color: #3B3A35;
-	line-height: 1.6em;
+	background-color: rgba(167, 164, 151, 0.1);
+	color: rgba(59, 58, 53, 0.6);
+	font-weight: 300;
+	letter-spacing: 0.2em;
+}
+
+/* Table styling */
+.table {
+	text-transform: uppercase;
+	background-color: white;
+	padding: 2em 0;
+	border-radius: 0.1em;
+	box-shadow: 0.2em 0.3em 0.4em rgba(29, 27, 21, 0.05);
+}
+
+.table-gutter {
+	margin-right: 4em;
+}
+
+h3,
+.price {
+	font-weight: inherit;
+}
+
+.price {
+	font-size: 4em;
+}
+
+span {
+	font-weight: 600;
+}
+
+.dollar {
+	font-size: 0.4em;
+	opacity: 0.25;
+}
+
+/* Unordered list styling */
+ul {
+	padding: 0;
+	margin: 0 0 3em;
+	list-style: none;
+}
+
+li {
+	margin-bottom: 0.4em;
+	font-weight: 300;
+}
+
+/* Buttons styling */
+button {
+	text-align: center;
+	border: none;
+	padding: 1em 0;
+	font-weight: 600;
+	text-transform: inherit;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	opacity: 0.85;
+}
+
+.btn-1 {
+	background-color: rgba(85, 117, 164, 0.6);
+	color: #20457C;
+	border-bottom: 0.2em solid #5575A4;
+}
+
+.btn-2 {
+	background-color: rgba(255, 169, 151, 0.6);
+	color: #FB6648;
+	border-bottom: 0.2em solid #FFA997;
+}
+
+.btn-3 {
+	background-color: rgba(167, 118, 141, 0.6);
+	color: #5E3448;
+	border-bottom: 0.2em solid #A7768D;
+}
+
+/* FlexBox layout */
+.fc {
+	display: flex;
+}
+
+.fc-wrap {
+	flex-wrap: wrap;
+}
+
+.fc-col {
+	flex-direction: column;
+}
+
+.fc-vh {
+	justify-content: center;
+	align-items: center;
+}
+
+.fc-h {
+	justify-content: center;
+}
+
+.fc-space {
+	justify-content: space-between;
+}
+
+.fc__i {
+	flex: 1 1 100%;
+	text-align: center;
+}
+
+.fc__i-top {
+	align-self: flex-start;
+}
+
+.fc__i-small {
+	flex: 0 0 36%;
+	margin: auto;
+}
+
+.wrapper {
+	height: 100vh;
+}
+
+@media only screen and (max-width: 48em) {
+	.wrapper {
+		flex-wrap: wrap;
+	}
+	.table {
+		flex-basis: 100%;
+	}
+	.table-gutter {
+		margin-right: 0;
+		margin-bottom: 2em;
+	}
+}
+
+@media only screen and (min-width:48em) and (max-width:70em) {
+	body {
+		width: 98%;
+	}
+	.table-gutter {
+		margin-right: 1em;
+	}
 }
