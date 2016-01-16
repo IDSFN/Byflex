@@ -11,10 +11,70 @@ html {
 }
 
 body {
-	width: 90%;
+	width: 80%;
 	margin: auto;
 	background-color: rgb(236, 223, 189); /*fallback*/
-	background-color: rgba(236, 223, 189, 0.05);
+	background-color: rgba(236, 223, 189, 0.25);
 	color: #3B3A35;
-	line-height: 1.6em;
+}
+
+.container,
+form {
+	display: flex;
+}
+
+.container {
+	height: 100vh;
+	align-items: center;
+	/*justify-content: center;*/
+}
+
+form {
+	flex: 1;
+}
+
+form > * {
+	/*flex: 1;*/
+	border: none;
+	background-color: white;
+	padding: 1.6em 1em;	
+}
+
+input[type="text"] {
+	flex: 4;
+	font-weight: 600;
+	letter-spacing: 0.024em;
+}
+
+form > *:focus {
+	outline: none;
+}
+
+
+button {
+	flex: 1;
+}
+
+select {
+	flex: 2;
+}
+
+button {
+	background-color: #FB6648;
+	font-weight: 600;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+button:hover {
+	background-color: #FF866C;
+}
+
+.split {
+	border-right: 0.07em solid rgba(29, 27, 21, 0.2);
+}
+
+/* Styling a date picker Input */
+input[type="date"] {
+
 }
